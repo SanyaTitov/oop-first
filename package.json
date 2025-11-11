@@ -15,10 +15,11 @@
   },
   "homepage": "https://github.com/SanyaTitov/oop-first#readme",
   "dependencies": {
-    "@reduxjs/toolkit": "^2.9.2",
+    "@reduxjs/toolkit": "^2.10.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-redux": "^9.2.0"
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
@@ -34,7 +35,7 @@
     "webpack-dev-server": "^5.2.2",
     "webpack-merge": "^6.0.1"
   },
-   "scripts": {
+  "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "dev": "webpack --mode development"
