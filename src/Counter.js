@@ -21,7 +21,7 @@ export function Counter() {
           onClick={() => dispatch(decrement())}
         >
           Decrement
-        </button>
+        </button> 
       </div>
     </div>
   )
