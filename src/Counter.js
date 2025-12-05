@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement } from './counterSlice'
+import { DecrementComponent } from './decrement-component'
 import { IncrementComponent } from './increment-component'
-
+import { CounterNumber } from './CounterNumber'
 export function Counter() {
   const count = useSelector(state => state.counter.value)
   const dispatch = useDispatch()
@@ -10,7 +10,7 @@ export function Counter() {
     <div>
       <div>
         <IncrementComponent />
-        <span>{count}</span>
+        <CounterNumber />
         <DecrementComponent />
       </div>
     </div>
