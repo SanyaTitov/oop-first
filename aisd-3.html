@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Титов Александр 24-11(11 Вариант)</h1>
+    <p>Введите числа через ПРОБЕЛ(если хотите написать десятичную дробь, то только через точку)</p>
+    <input type="text" id="input">
+    <button onclick = "activation()">Нажмите на кнопку или Enter, чтобы увидеть результат</button>
+    <br>
+    <p id ="resultation"></p>
+    <script>
+        function activation(){
+            let summa = 0;
+            const int = document.getElementById('input').value;
+            if (int.trim() === ''){
+                document.getElementById('resultation').textContent = 'Умоляю, введите чертовы числа!!!';
+                return;
+            }
+            const array = int.split(' ').map(item =>{
+                const numberos = parseFloat(item);
+                return isNaN(numberos) ? 0 : (numberos);
+            })
+            for (let i = 4; i < array.length; i += 5){
+                summa += array[i];
+            }
+            if (array.length < 5){
+                document.getElementById('resultation').textContent = 'мало так называемых элементов, надо 5 или больше';
+                return;
+            }
+            document.getElementById('resultation').textContent = `Сумма всех пятых элементов равна ${summa}`;
+        }
+        document.getElementById('input').addEventListener('keypress', function(){
+            if (event.key === 'Enter'){
+                activation();
+            }
+        })
+    </script>
+</body>
+</html>
